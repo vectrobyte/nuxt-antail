@@ -24,10 +24,9 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    {
-      src: 'ant-design-vue/dist/antd.less',
-      lang: 'less',
-    },
+    '~/assets/css/tailwind.css',
+    'ant-design-vue/dist/antd.less',
+    '~/assets/scss/main.scss', // any custom styling for global configuration
   ],
   /*
    ** Plugins to load before mounting the App

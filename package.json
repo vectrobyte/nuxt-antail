@@ -24,9 +24,11 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "ant-design-vue": "^1.1.10",
     "babel-core": "^6.26.3",
+    "consola": "^2.10.1",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
@@ -39,6 +41,7 @@
     "babel-plugin-import": "^1.12.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-vue": "^5.2.3",

@@ -28,7 +28,7 @@ module.exports = {
       status,
       'always'
     ],
-    'import/extensions': ['error', 'always', {
+    'import/extensions': [status, 'always', {
       'js': 'never',
       'vue': 'never'
     }],

@@ -1,4 +1,5 @@
 const status = (process.env.NODE_ENV === 'production') ? 'error' : 'warn';
+const path = require('path');
 
 module.exports = {
   root: true,
@@ -14,8 +15,19 @@ module.exports = {
     '@vue/airbnb',
   ],
   plugins: ['prettier'],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['~', path.resolve(__dirname)],
+        ],
+        extensions: ['.js', '.vue', '.json']
+      }
+    }
+  },
   rules: {
     'nuxt/no-cjs-in-config': 'off',
+    'linebreak-style': ["error", "unix"],
     'indent': [
       status,
       2
@@ -45,12 +57,11 @@ module.exports = {
     'no-console': status,
     'no-debugger': status,
     'max-len': 'off',
-    'linebreak-style': ["error", "unix"],
-    'import/prefer-default-export': 'off',
     'vue/html-closing-bracket-newline': [status, {
       'singleline': 'never',
       'multiline': 'never'
     }],
+    'import/prefer-default-export': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',

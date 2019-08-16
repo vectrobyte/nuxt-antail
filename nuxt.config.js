@@ -11,10 +11,10 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -23,17 +23,25 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.css'],
+  css: [
+    {
+      src: 'ant-design-vue/dist/antd.less',
+      lang: 'less',
+    },
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/antd-ui'],
+  plugins: [
+    '@/plugins/antd-ui',
+  ],
   /*
    ** Nuxt.js dev-modules
    */
   devModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -41,7 +49,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
   ],
   /*
    ** Axios module configuration
@@ -55,6 +63,35 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
-}
+    babel: {
+      plugins: [
+        [
+          'import',
+          {
+            libraryName: 'ant-design-vue',
+            // libraryDirectory: 'es'
+            // style: true
+          },
+          'ant-design-vue',
+        ],
+      ],
+    },
+    splitChunks: {
+      layouts: true,
+    },
+    loaders: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: {
+          'primary-color': '#78C360',
+          'link-color': '#78C360',
+          'component-background': '#ffffff',
+        },
+      },
+    },
+    extend(config, { loaders: { scss } }) {
+      // eslint-disable-next-line no-param-reassign
+      scss.includePaths = ['node_modules'];
+    },
+  },
+};

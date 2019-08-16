@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <Container class="py-5">
     <div>
-      <logo />
+      <Logo />
       <h1 class="title">
         nuxt-antail
       </h1>
@@ -9,35 +9,23 @@
         Nuxt app startup created with tailwindcss utilities and ant-design-vue
         components.
       </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
     </div>
-  </div>
+  </Container>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Container from '~/components/base/Container';
+import Logo from '~/components/svg/Logo';
 
 export default {
-  components: {
-    Logo
-  }
-}
+  name: 'HomePage',
+  layout: 'default',
+  components: { Logo, Container },
+};
 </script>
 
-<style>
+<style scoped>
 .container {
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;

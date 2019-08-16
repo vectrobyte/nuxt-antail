@@ -1,0 +1,20 @@
+@import "fonts";
+@import "variables";
+@import 'utilities';
+@import "typography";
+
+
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-weight: 600;
+}
+
+::placeholder {
+  //font-family: 'Nexa', $font-family-base !important;
+}
+
+#__nuxt, #__layout {
+  height: 100%;
+}

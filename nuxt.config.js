@@ -33,6 +33,7 @@ module.exports = {
    */
   plugins: [
     '@/plugins/antd-ui',
+    '@/plugins/embed-utilities',
   ],
   /*
    ** Nuxt.js dev-modules

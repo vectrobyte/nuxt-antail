@@ -1,12 +1,15 @@
 <template>
   <footer
-    class="py-4 w-full"
+    class="w-full"
     :class="[bgColor]">
-    <Container>
-      <FlexBox
-        align-items="center"
-        justify="between">
-        Footer Area
+    <Container class="py-3">
+      <FlexBox align-items="center">
+        <NuxtLink to="/">
+          <FlexBox align-items="center">
+            <Avatar size="extra-small" />
+            <i class="ml-2 text-medium text-medium">Name Here</i>
+          </FlexBox>
+        </NuxtLink>
       </FlexBox>
     </Container>
   </footer>
@@ -15,10 +18,11 @@
 <script>
 import Container from '../../components/base/Container';
 import FlexBox from '../../components/base/FlexBox';
+import Avatar from '~/components/elements/Avatar'
 
 export default {
   name: 'Footer',
-  components: { FlexBox, Container },
+  components: { Avatar, FlexBox, Container },
   props: {
     color: {
       type: String,

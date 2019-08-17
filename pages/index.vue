@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Container from '~/components/base/Container';
+import Container from '~/components/elements/Container';
 import Logo from '~/components/svg/Logo';
 
 export default {

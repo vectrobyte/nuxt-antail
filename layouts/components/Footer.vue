@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import Container from '../../components/base/Container';
-import FlexBox from '../../components/base/FlexBox';
-import Avatar from '~/components/elements/Avatar'
+import Container from '~/components/elements/Container';
+import FlexBox from '~/components/elements/FlexBox';
+import Avatar from '~/components/elements/Avatar';
 
 export default {
   name: 'Footer',

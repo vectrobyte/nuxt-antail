@@ -34,10 +34,10 @@
 </template>
 
 <script>
-import Button from '../../components/form/Button';
-import FlexBox from '../../components/base/FlexBox';
-import Container from '../../components/base/Container';
+import Button from '~/components/form/Button';
 import Avatar from '~/components/elements/Avatar';
+import FlexBox from '~/components/elements/FlexBox';
+import Container from '~/components/elements/Container';
 
 export default {
   layout: 'default',

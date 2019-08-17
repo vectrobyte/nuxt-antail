@@ -19,7 +19,7 @@
 import Placeholder from '~/components/svg/Placeholder';
 
 export default {
-  name: 'AvatarImage',
+  name: 'Avatar',
   components: { Placeholder },
   props: {
     path: {
@@ -98,6 +98,12 @@ export default {
     width: 50px;
     min-height: 50px;
     min-width: 50px;
+  }
+  .image-extra-small {
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
   }
   .auto-height {
     height: auto;

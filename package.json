@@ -11,6 +11,10 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
+  "engines": {
+    "npm": "6.10.2",
+    "node": "^12.8.0"
+  },
   "lint-staged": {
     "*.{js,vue}": "eslint"
   },

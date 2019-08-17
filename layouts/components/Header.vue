@@ -1,9 +1,14 @@
 <template>
-  <nav class="py-4">
+  <nav class="py-5">
     <Container>
-      <FlexBox justify="between">
+      <FlexBox
+        justify="between"
+        align-items="center">
         <NuxtLink to="/">
-          Icon here
+          <FlexBox align-items="center">
+            <Avatar />
+            <i class="ml-2 text-medium text-large">Name Here</i>
+          </FlexBox>
         </NuxtLink>
 
         <FlexBox
@@ -32,11 +37,13 @@
 import Button from '../../components/form/Button';
 import FlexBox from '../../components/base/FlexBox';
 import Container from '../../components/base/Container';
+import Avatar from '~/components/elements/Avatar';
 
 export default {
   layout: 'default',
   name: 'Header',
   components: {
+    Avatar,
     Container,
     FlexBox,
     Button,

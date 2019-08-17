@@ -6,10 +6,11 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
+    :width="`${size}px`"
+    :height="`${size}px`"
     viewBox="0 0 500 500"
     enable-background="new 0 0 500 500"
-    xml:space="preserve"
-    :style="`${iconSize};`">
+    xml:space="preserve">
     <rect
       x="-0.5"
       y="1"
@@ -36,17 +37,12 @@
 export default {
   name: 'Placeholder',
   props: {
-    height: {
+    size: {
       type: [Number, String],
-      default: '',
+      default: 500,
     },
   },
-  computed: {
-    iconSize() {
-      const { size } = this;
-      return size ? `height: ${size}px` : '';
-    },
-  },
+  computed: {},
 };
 </script>
 

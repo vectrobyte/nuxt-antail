@@ -5,12 +5,12 @@
       @login="goTo('/login')"
       @register="goTo('/register')" />
     <!--    Page Content-->
-    <nuxt style="padding-bottom: 80px;" />
+    <nuxt style="padding-bottom: 65px;" />
     <!--    Page Content-->
     <Footer
       color="gray-400"
       class="absolute"
-      style="height: 80px; bottom: 0" />
+      style="height: 65px; bottom: 0" />
   </main>
 </template>
 

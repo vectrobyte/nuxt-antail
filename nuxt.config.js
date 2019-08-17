@@ -82,8 +82,6 @@ module.exports = {
       less: {
         javascriptEnabled: true,
         modifyVars: {
-          'primary-color': '#78C360',
-          'link-color': '#78C360',
           'component-background': '#ffffff',
         },
       },

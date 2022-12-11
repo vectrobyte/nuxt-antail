@@ -30,7 +30,7 @@
     "babel-core": "^6.26.3",
     "consola": "^2.10.1",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "js-search": "^1.4.3",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
